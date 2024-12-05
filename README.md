@@ -36,9 +36,19 @@
 ### 2. Connect your application to MongoDB to store and manange data.
   - Mongoose is used for managing MongoDB operations and defining data models (schemas). It simplifies the interaction with the database by providing an object data modeling (ODM) layer.
   - The application connects to the database using a connection string (MongoDB URI), which specifies the location of the MongoDB server and the database to use.
-### 3. Connection between database and server.
+### 3. Connection between database and server
   - The connection is typically made at the start of the server, where the connection string is specified.
   - Once connected, the server can perform various operations like reading, inserting, updating, or deleting data in the MongoDB database.
 ### 4. Error handler 
   - The ErrorHandler.js catches errors that occur during the execution of the application, such as database connection issues, bad API requests, or server misconfigurations.
   - The StackCaptureTrace() logs the error and provides a structured response to the client, including the error message and information about where the error occurred (e.g., the file name where the error originated).
+## Milestone 4: Creating User Model and Controller
+### 1. User model for our database
+  - The User model is a blueprint that defines the structure of user data in the database. It specifies the fields that each user will have and the data types for those fields. 
+  Typically, it includes User Information: Fields like name, email, password, etc. This model is then used by the application to interact with the database, allowing for operations such as user registration, login, and updating user details.
+
+### 2. Setting up controllers to handle user-related data
+  - The controllers make sure if the email entered is unique and checks if it is already present in the database. If the email doesn't exist, it allows the user to enter his/her details again like name, email and password.
+### 3. Enabling file uploads using Mutler
+  - Multer is a middleware used for handling file uploads in Node.js. It is often used for managing user-uploaded files, such as profile pictures or documents. 
+  - Installed multer(npm i multer).
