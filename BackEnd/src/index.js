@@ -6,6 +6,7 @@ if (process.env.NODE_ENV !== 'PRODUCTION') {
 const connectDatabase = require('./DB/database.js');
 const app = require('./app.js');
 const PORT = process.env.PORT;
+
 const server = app.listen(PORT, async ()=>{
     connectDatabase();
     console.log('The server is running on the Port:8080 URL: http://localhost:8080');

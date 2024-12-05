@@ -6,11 +6,17 @@ if (process.env.NODE_ENV !== 'PRODUCTION') {
 const express = require('express');
 
 const app = express();
+const userRouter = require('./routes/user.route');
 
 app.get('/',(req,res)=>{
     return res.send('Welcome to backend');
 })
 
+app.get("/user/squad",(req,res)=>{
+    return res.send({message: 'Good Afternoon'})
+});
+
+app.use('')
 module.exports = app;
 
 
