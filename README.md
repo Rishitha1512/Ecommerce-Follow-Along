@@ -26,5 +26,19 @@
    3. CORS: A middleware that allows or restricts cross-origin requests in a web application, ensuring secure data sharing between different domains. (npm i cors)
    4. Mongoose: An ODM (Object Data Modeling) library for MongoDB and Node.js that provides a straightforward way to interact with a MongoDB database using schemas. (npm i mongoose)
 
-   ### 3. Setting up Login page
+### 3. Setting up Login page
    Created a login page with two input fields for email and password along with a log in button. Used use state to give functionality to the input fields. Used tailwind css to style the login page.
+
+## Milestone 3: Project Setup for Backend
+### 1. Setting up of nodejs server and handling the API requests.
+  - Express.js is used to define the structure and route handling logic of the application.
+  - API requests are processed using appropriate HTTP methods for various tasks like fetching data, creating resources, updating, or deleting them.
+### 2. Connect your application to MongoDB to store and manange data.
+  - Mongoose is used for managing MongoDB operations and defining data models (schemas). It simplifies the interaction with the database by providing an object data modeling (ODM) layer.
+  - The application connects to the database using a connection string (MongoDB URI), which specifies the location of the MongoDB server and the database to use.
+### 3. Connection between database and server.
+  - The connection is typically made at the start of the server, where the connection string is specified.
+  - Once connected, the server can perform various operations like reading, inserting, updating, or deleting data in the MongoDB database.
+### 4. Error handler 
+  - The ErrorHandler.js catches errors that occur during the execution of the application, such as database connection issues, bad API requests, or server misconfigurations.
+  - The StackCaptureTrace() logs the error and provides a structured response to the client, including the error message and information about where the error occurred (e.g., the file name where the error originated).
