@@ -52,31 +52,25 @@
 ### 3. Enabling file uploads using Mutler
   - Multer is a middleware used for handling file uploads in Node.js. It is often used for managing user-uploaded files, such as profile pictures or documents. 
   - Installed multer(npm i multer).
-  
-
 # Milestone 5: Creating the Signup page
 
-### 1. **Created a Signup Page** :
+### 1. **Created a Signup Page**
    - Designed a user-friendly sign-up form with the following fields:
      - **Full Name**: A text input field for capturing the user's full name.
      - **Email Address**: A text input field for entering the user's email.
      - **Password**: A password input field for securely capturing the user's password.
      - **File Upload**: An input field that allows the user to upload a file (e.g., profile picture or document).
      - **Sign-Up Button**: A button to submit the form and initiate the sign-up process.
-   - The form includes validation to ensure all fields are filled correctly and meets the necessary requirements.
-   - Styled the page using **TailwindCSS** for a responsive and clean layout.
-
-### 2. **Created Validation Object Using RegEx**
-   - Implemented client-side form validation to enhance user experience and catch errors early.
+- Styled the page using **TailwindCSS** for a responsive and clean layout.
+### 2. Created validation Object using RegEx
+- Implemented client-side form validation to enhance user experience and catch errors early.
    - **Regular Expressions (RegEx)** were used for:
      - **Email Validation**: Ensured that the email is in a valid format (e.g., `user@example.com`).
      - **Password Validation**: Enforced password complexity, such as minimum length and inclusion of special characters or numbers.
-     - **File Upload Validation** (Optional): Validated the file type (e.g., only images) or file size during upload.
+     
    - Validation is triggered when the user submits the form or interacts with the input fields.
-   - Error messages are displayed dynamically to guide users in correcting mistakes.
-
-### 3. **Setup React Router for the Present Pages**
-   - Installed **React Router DOM** by running:
+### 3. Setup React-Router for the Present Pages
+- Installed **React Router DOM** by running:
      ```bash
      npm install react-router-dom
      ```
@@ -85,9 +79,5 @@
      - **Home Page**: The default landing page of the application.
      - **Sign-Up Page**: The page where users can fill out their details to sign up.
    - Used the `<Route>` component to define the URL paths and the corresponding components to render.
-   - Added **Navigation Links** (using `<Link>` or `<NavLink>`) to allow users to navigate between pages.
+   - Added **Navigation Links** (using `<Link>`) to allow users to navigate between pages.
    - Set up the `<Routes>` component to ensure the correct page is rendered based on the URL.
-   - Tested route navigation to confirm smooth transitions between pages without full-page reloads.
-
-
-
