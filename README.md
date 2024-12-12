@@ -52,9 +52,11 @@
 ### 3. Enabling file uploads using Mutler
   - Multer is a middleware used for handling file uploads in Node.js. It is often used for managing user-uploaded files, such as profile pictures or documents. 
   - Installed multer(npm i multer).
+  
+
 # Milestone 5: Creating the Signup page
 
-### 1. **Created a Signup Page**
+### 1. **Created a Signup Page** :
    - Designed a user-friendly sign-up form with the following fields:
      - **Full Name**: A text input field for capturing the user's full name.
      - **Email Address**: A text input field for entering the user's email.
