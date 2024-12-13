@@ -52,7 +52,7 @@
 ### 3. Enabling file uploads using Mutler
   - Multer is a middleware used for handling file uploads in Node.js. It is often used for managing user-uploaded files, such as profile pictures or documents. 
   - Installed multer(npm i multer).
-# Milestone 5: Creating the Signup page
+## Milestone 5: Creating the Signup page
 
 ### 1. **Created a Signup Page**
    - Designed a user-friendly sign-up form with the following fields:
@@ -81,3 +81,20 @@
    - Used the `<Route>` component to define the URL paths and the corresponding components to render.
    - Added **Navigation Links** (using `<Link>`) to allow users to navigate between pages.
    - Set up the `<Routes>` component to ensure the correct page is rendered based on the URL.
+## Milestone 6: 
+### 1. **Generate JWT Token for the User at Signup**
+   - After user signup, generate a JWT token using the `jsonwebtoken` library.
+   - Include user-specific information (e.g., email or user ID).
+
+### 2. **Create a Verification Link with the Token**
+   - Once the JWT token is created, generate a URL with the token.
+   - This URL will be sent to the user's email for verification.
+
+### 3. **Configure Nodemailer to Send the Email**
+   - Set up Nodemailer with an email provider (e.g., Gmail, SMTP).
+   - Send an email to the user containing the verification link.
+
+### 4. **Create an Endpoint to Verify the Token**
+   - Create a `/verify-email` endpoint that accepts the token as a query parameter.
+   - Use the `jsonwebtoken` library to decode and verify the token.
+   - If valid, mark the user’s email as verified. If invalid or expired, return an error message.
