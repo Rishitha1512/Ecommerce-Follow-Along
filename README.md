@@ -98,3 +98,25 @@
    - Create a `/verify-email` endpoint that accepts the token as a query parameter.
    - Use the `jsonwebtoken` library to decode and verify the token.
    - If valid, mark the user’s email as verified. If invalid or expired, return an error message.
+## Milestone 7:
+### Signup Route:
+
+### 1. **Input**: The user provides their `name`, `email`, and `password`.
+### 2. **Check if user exists**: 
+   - If the user is already in the database, a message is returned stating "User is already present" and prompts for direct login.
+   - If the user is not found, the password is hashed using a secure hashing algorithm (like **Bcrypt.js** or **Argon2.js**).
+### 3. **Create a new user**: Store the `name`, `email`, and `hashed password` in the database.
+
+### Login Route
+
+### 1. **Input**: The user provides their `email` and `password`.
+### 2. **Check credentials**:
+   - If the email exists in the database, the entered password is compared with the stored hash.
+   - If credentials match, a **token** is generated and sent as a **cookie** for future authenticated requests.
+   - If the email is not found or the password doesn't match, the response will indicate the need to **Signup first**.
+
+### Key Features
+
+- **User Authentication**: Securely handle user signup and login.
+- **Password Hashing**: Use hashing algorithms like Bcrypt.js or Argon2.js to securely store passwords.
+- **Token-based Authentication**: Use JWT tokens to authenticate users after login and store the token as a cookie.
