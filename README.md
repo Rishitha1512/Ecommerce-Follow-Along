@@ -120,3 +120,19 @@
 - **User Authentication**: Securely handle user signup and login.
 - **Password Hashing**: Use hashing algorithms like Bcrypt.js or Argon2.js to securely store passwords.
 - **Token-based Authentication**: Use JWT tokens to authenticate users after login and store the token as a cookie.
+## Milestone 8:
+### 1. **Home Page**:
+   - Displays a grid of product cards using dummy data.
+   - Each card has a product title, image, description, rating, and price.
+   
+### 2. **Card Component**:
+   - Represents an individual product with details like:
+     - **Title**: Displays the product name.
+     - **Image**: Displays a sample product image.
+     - **Price**: Shows the current and discounted prices.
+     - **Discount Badge**: A label indicating a discount percentage.
+     - **Add to Cart Button**: An interactive button for adding the product to the cart.
+
+### 3. **Grid Layout**:
+   - The Home Page uses a 3-column grid layout to display the products.
+   - Dummy data is used to fill the product details like title, price, and image.
