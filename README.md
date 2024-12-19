@@ -136,3 +136,30 @@
 ### 3. **Grid Layout**:
    - The Home Page uses a 3-column grid layout to display the products.
    - Dummy data is used to fill the product details like title, price, and image.
+
+## Milestone 9:
+
+### Features
+- **Product Entry Form** with fields for:
+  - Title
+  - Description
+  - Discounted Price
+  - Original Price
+  - Quantity
+  - Category
+  - Rating
+  - Multiple Image Uploads
+- **Form Validation** to ensure all required fields are filled.
+- **Axios Integration** for making a POST request to the backend.
+- **Image Upload** using `FormData` for handling file uploads.
+
+### Technologies Used
+- **React**: For building the product entry form and managing state.
+- **Axios**: To send product data to the backend server.
+- **Tailwind CSS**: For styling the form and ensuring a clean, responsive layout.
+- **JavaScript (ES6)**: For form handling and network requests.
+
+### How It Works
+1. The user fills in the product information (title, description, price, etc.) and uploads images.
+2. Upon submitting the form, the data is gathered and validated.
+3. The form data, including image files, is sent as a **POST** request using **Axios** to the backend for processing.
