@@ -163,3 +163,15 @@
 1. The user fills in the product information (title, description, price, etc.) and uploads images.
 2. Upon submitting the form, the data is gathered and validated.
 3. The form data, including image files, is sent as a **POST** request using **Axios** to the backend for processing.
+
+## Milestone 10:
+
+### 1. **Schema**:
+  - Added the schema for the the products.
+### 2. **Cloudinary Integration**:
+   - Images uploaded by the user are sent to **Cloudinary**, a cloud-based storage service, for secure and scalable image hosting.
+   - Once uploaded, Cloudinary returns a URL for each image, which is saved in the product schema along with other product details.
+
+### 3. **Multer Integration**:
+   - **Multer** is used for handling file uploads on the backend. It processes multi-part form data, allowing the user to upload product images as part of the product creation process.
+   - Multer handles image validation and storage, then forwards the images to Cloudinary.
