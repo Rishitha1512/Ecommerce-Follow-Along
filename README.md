@@ -175,3 +175,23 @@
 ### 3. **Multer Integration**:
    - **Multer** is used for handling file uploads on the backend. It processes multi-part form data, allowing the user to upload product images as part of the product creation process.
    - Multer handles image validation and storage, then forwards the images to Cloudinary.
+## Milestone 11:
+### 1. Design the GET Endpoint:
+ - Create a new endpoint that will handle GET requests.
+- Define the URL path for the endpoint based on the data you are retrieving(eg: /get-products)
+
+### 2. Set Up Database Connection:
+
+- Ensure that your application is connected to the database.
+### 3. Fetch Data from the Database:
+
+- Write a function or a query to retrieve the necessary data from the database.
+- Handle any necessary filters or conditions.
+
+### 4. Handle Errors and Edge Cases:
+
+- Send appropriate HTTP status codes based on the outcome:
+
+i. 200 OK for successful data retrieval.
+
+ii. 500 Internal Server Error if there are issues with fetching data from the database.
