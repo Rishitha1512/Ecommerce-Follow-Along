@@ -196,3 +196,13 @@
 i. 200 OK for successful data retrieval.
 
 ii. 500 Internal Server Error if there are issues with fetching data from the database.
+
+## Milestone 12:
+### 1. **Card Component**
+   - Displays individual product details: title, image, description, original price, discounted price, and rating.
+   - Uses props for dynamic content: `title`, `image`, `description`, `originalPrice`, `discountedPrice`, and `rating`.
+
+### 2. **HomePage Component**
+   - Fetches product data from the backend using `axios` and `GET` request to `/product/get-products`.
+   - Stores the data in state using `useState`.
+   - Maps through the product data and renders a `Card` for each product.
