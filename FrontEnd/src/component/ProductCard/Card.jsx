@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { Link } from 'react-router-dom';
 function Card({
   title,
   image,
@@ -6,6 +7,7 @@ function Card({
   discountedPrice,
   originalPrice,
   rating,
+  id
 }) {
   return (
     <div className="w-72 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
@@ -54,6 +56,11 @@ function Card({
           <button className="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-lg transition-colors duration-200">
             Add to cart
           </button>
+          <Link to={`/update-form/${id}`}>
+            <button className="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-lg transition-colors duration-200">
+              Update
+            </button>
+          </Link>
         </div>
       </div>
     </div>
