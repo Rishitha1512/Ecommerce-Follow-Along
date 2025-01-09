@@ -206,3 +206,19 @@ ii. 500 Internal Server Error if there are issues with fetching data from the da
    - Fetches product data from the backend using `axios` and `GET` request to `/product/get-products`.
    - Stores the data in state using `useState`.
    - Maps through the product data and renders a `Card` for each product.
+     
+## Milestone 13:
+### 1. Backend (PUT Route)
+- **Purpose:** Handle the update request for the data.
+- **Functionality:**
+  - A PUT route is created to allow updates to data in the backend.
+  - The route expects the updated data in the request body, except for images.
+  - Upon a successful update, the backend returns a confirmation or the updated data.
+
+### 2. Frontend (Page for Auto Filling)
+- **Purpose:** Automatically populate the data for the user to edit.
+- **Functionality:**
+  - Fetch data from the backend using a GET request using the item's unique ID.
+  - Populate the input fields with the fetched data, excluding image fields.
+  - Allow the user to update values in the form and submit the changes.
+  - Upon form submission, the updated data is sent to the backend using the PUT request.
