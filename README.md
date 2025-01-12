@@ -222,3 +222,16 @@ ii. 500 Internal Server Error if there are issues with fetching data from the da
   - Populate the input fields with the fetched data, excluding image fields.
   - Allow the user to update values in the form and submit the changes.
   - Upon form submission, the updated data is sent to the backend using the PUT request.
+
+## Milestone 14:
+### 1. **DELETE Route:** in BackEnd
+   - A DELETE route was created in the backend to handle the deletion of products from the database.
+   - The route accepts the product ID as a parameter and deletes the corresponding product.
+   - Proper error handling was implemented to ensure the product is deleted successfully or an appropriate error message is returned if the product is not found.
+
+### 2. **DELETE Button:** in FrontEnd
+   - A "Delete" button was added on the product detail or list page to trigger the deletion process.
+   - The button is associated with a click event handler that sends a request to the backend DELETE route using the product's ID.
+
+### 3. **UI Update After Deletion:**
+   - After a successful deletion, the UI is updated to reflect the changes, such as removing the product from the displayed list.
