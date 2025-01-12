@@ -60,9 +60,16 @@ function UpdateForm(){
         formDataBody.append("quantity", quantity);
         formDataBody.append("rating", rating);
     
-        images?.map((ele) => {
-          formDataBody.append("filepath", ele);
-        });
+        // images?.map((ele) => {
+        //   formDataBody.append("filepath", ele);
+        // });
+        if (images) {
+          images?.map((ele) => {
+            formDataBody.append('files', ele);
+          });
+        } else {
+          formDataBody.append('images', formData.images);
+        }
     
         axios
           .put(`http://localhost:8080/product/update-products/${id}`, formDataBody, {
@@ -83,7 +90,7 @@ function UpdateForm(){
             `http://localhost:8080/product/get-single/${id}`
             )
           setFormData(singleData.data.data)
-          setImages(singleData.data.images)
+          setImages(singleData.data.data.images)
         };
         getDataForId();
       },[id])
