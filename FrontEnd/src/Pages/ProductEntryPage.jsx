@@ -64,7 +64,7 @@ function ProductEntryPage() {
     formDataBody.append('rating', rating);
 
     Images.map((ele) => {
-      formDataBody.append('filepath', ele);
+      formDataBody.append('files', ele);
     });
 
     axios.post('http://localhost:8080/product/create-product', formDataBody, {
