@@ -235,3 +235,14 @@ ii. 500 Internal Server Error if there are issues with fetching data from the da
 
 ### 3. **UI Update After Deletion:**
    - After a successful deletion, the UI is updated to reflect the changes, such as removing the product from the displayed list.
+
+## Milestone 15:
+### 1. **Navbar Component**:
+   - **Home**: A link to the homepage of the website.
+   - **My Products**: A link to the page listing the user's products.
+   - **Add Product**: A link to the page where users can add new products.
+   - **Cart**: A link to the user's shopping cart page.
+
+### 2. **Responsive Navbar**:
+   - The navbar has been made responsive to all screen sizes, ensuring it works seamlessly across mobile, tablet, and desktop devices.
+   - The layout adapts based on screen width, with a hamburger menu appearing on smaller screens.
