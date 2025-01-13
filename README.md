@@ -246,3 +246,9 @@ ii. 500 Internal Server Error if there are issues with fetching data from the da
 ### 2. **Responsive Navbar**:
    - The navbar has been made responsive to all screen sizes, ensuring it works seamlessly across mobile, tablet, and desktop devices.
    - The layout adapts based on screen width, with a hamburger menu appearing on smaller screens.
+
+## Milestone 16:
+### 1. **New Products Page**:
+   - A new page has been created to display the products details when clicked on it.
+   - Each product is displayed with essential details including Product Name, price, description and category.
+   - The data for each product is rendered in a loop using `.map()` to ensure scalability, allowing the addition of more products in the future without changing the component structure.
