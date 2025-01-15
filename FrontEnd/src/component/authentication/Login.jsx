@@ -1,99 +1,95 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 function LoginPage() {
-  const [userCredentials, setUserCredentials] = useState({
-    userEmail: '',
-    userPassword: '',
+  const [credentials, setCreds] = useState({
+    email: '',
+    password: '',
   });
+  const navigate = useNavigate();
 
-  const handleInputChange = (event) => {
+  const handleChange = (event) => {
     const { name, value } = event.target;
-    console.log(name, value);
-    setUserCredentials({
-      ...userCredentials,
+    setCreds({
+      ...credentials,
       [name]: value,
     });
   };
 
-//   const handleLoginClick = () => {
-//     // axios request to backend
-//   };
+  const handleClickLogin = async (e) => {
+    e.preventDefault();
+    try {
+      // axios request to backend
+      const response = await axios.post('http://localhost:8080/user/login', {
+        email: credentials.email,
+        password: credentials.password,
+      });
+      localStorage.setItem('token', response.data.token);
+      navigate('/');
+    } catch (err) {
+      console.log('Something went wrong: ' + err.message);
+    }
+  };
 
   return (
-    <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
-      <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-        <h2 className="mt-10 text-center text-2xl/9 font-bold tracking-tight text-gray-800">
-          Log in to your account
+    <div className="flex justify-center items-center min-h-screen bg-gray-100">
+      <form
+        onSubmit={handleClickLogin}
+        className="w-full max-w-md bg-white p-8 rounded-lg shadow-lg"
+      >
+        <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
+          Login to your account
         </h2>
-      </div>
 
-      <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-        <form className="space-y-6" action="#" method="POST">
-          <div>
-            <label
-              htmlFor="userEmail"
-              className="block text-sm/6 font-medium text-gray-800"
-            >
-              Email address
-            </label>
-            <div className="mt-2">
-              <input
-                type="email"
-                name="userEmail"
-                id="userEmail"
-                autoComplete="email"
-                required
-                value={userCredentials.userEmail}
-                onChange={handleInputChange}
-                className="text-black block w-full rounded-md bg-white px-3 py-1.5 text-base outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-teal-600 sm:text-sm/6"
-              />
-            </div>
-          </div>
+        {/* Email Field */}
+        <div className="mb-4">
+          <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
+            Email address
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={credentials.email}
+            onChange={handleChange}
+            placeholder="Enter your email"
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required
+          />
+        </div>
 
-          <div>
-            <div className="flex items-center justify-between">
-              <label
-                htmlFor="userPassword"
-                className="block text-sm/6 font-medium text-gray-800"
-              >
-                Password
-              </label>
-              <div className="text-sm">
-                <a
-                  href="#"
-                  className="font-semibold text-teal-600 hover:text-teal-500"
-                >
-                  Forgot password?
-                </a>
-              </div>
-            </div>
-            <div className="mt-2">
-              <input
-                type="password"
-                name="userPassword"
-                id="userPassword"
-                autoComplete="current-password"
-                required
-                onChange={handleInputChange}
-                className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-teal-600 sm:text-sm/6"
-              />
-            </div>
-          </div>
+        {/* Password Field */}
+        <div className="mb-4">
+          <label htmlFor="password" className="block text-gray-700 font-medium mb-2">
+            Password
+          </label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            value={credentials.password}
+            onChange={handleChange}
+            placeholder="Enter your password"
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required
+          />
+        </div>
 
-          <div>
-            <button
-              type="submit"
-              className="flex w-full justify-center rounded-md bg-teal-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-sm hover:bg-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600"
-            >
-              Log in
-            </button>
-            <p className="text-center">
-          Do not have an account ? <Link to={'/signup'}>SignUp</Link>
+        {/* Submit Button */}
+        <div className="mb-4">
+          <button
+            type="submit"
+            className="w-full bg-blue-500 text-white font-medium py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+          >
+            Sign in
+          </button>
+        </div>
+
+        <p className="text-center">
+          Dont have an account? <Link to="/signup" className="text-blue-500 hover:text-blue-600">Sign up</Link>
         </p>
-          </div>
-        </form>
-      </div>
+      </form>
     </div>
   );
 }
