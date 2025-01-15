@@ -1,5 +1,5 @@
 const  validationFormObject = {
-    validteName: (name) => {
+    validateName: (name) => {
         const nameRegex = /^[a-zA-Z]{2,}$/;
         if (name.length < 2) {
             return 'Name cannot be less than 2 letters';

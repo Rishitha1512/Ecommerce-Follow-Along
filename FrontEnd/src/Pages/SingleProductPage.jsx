@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+import axios from 'axios';
 import { Heart, ShoppingBag, Star} from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
@@ -11,7 +12,15 @@ function SinglePageProduct() {
     const [selectedImage, setSelectedImage] = useState(0);
 
     useEffect(() => {
-
+      console.log('here....');
+    const getProductSingleDetails = async () => {
+      const response = await axios.get(
+        `http://localhost:8080/product/get-single/${id}`
+      );
+      console.log(response);
+      setProduct(response.data.data);
+    };
+    getProductSingleDetails();
     },[id]);
     return(
       <div className="min-h-screen bg-gray-50">
