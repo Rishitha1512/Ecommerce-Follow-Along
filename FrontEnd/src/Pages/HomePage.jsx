@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Card from "../component/ProductCard/Card.jsx";
 import axios from "axios";
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 function HomePage() {
   const [data, setdata] = useState();
@@ -39,7 +39,7 @@ function HomePage() {
               className="border-white"
             >
               
-              <Link to={`/product-details/${ele._id}`}>
+              
                 <Card
                   title={ele.title}
                   image={
@@ -53,7 +53,7 @@ function HomePage() {
                   id={ele._id}
                   handleDelete={handleDelete}
                 />
-              </Link>
+            
             </div>
           );
         })}

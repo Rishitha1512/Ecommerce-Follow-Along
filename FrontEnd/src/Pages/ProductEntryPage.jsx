@@ -68,11 +68,35 @@ function ProductEntryPage() {
       formDataBody.append('files', ele);
     });
 
-    axios.post('http://localhost:8080/product/create-product', formDataBody, {
-      headers: {
-        'Content-Type': 'multipart/form-data',
-      },
-    });
+    const token = localStorage.getItem('token');
+    axios
+      .post(
+        `http://localhost:8080/product/create-product?token=${token}`,
+        formDataBody,
+        {
+          headers: {
+            'Content-Type': 'multipart/form-data',
+          },
+        }
+      )
+      .then((res) => {
+        console.log(res);
+        return res;
+      })
+      .catch((er) => {
+        console.log('error', er);
+        return er;
+      });
+
+    // for (let pair of formDataBody.entries()) {
+    //   if (pair[1] instanceof File) {
+    //     console.log(
+    //       `${pair[0]}: File - ${pair[1].name}, ${pair[1].type}, ${pair[1].size} bytes`
+    //     );
+    //   } else {
+    //     console.log(`${pair[0]}: ${pair[1]}`);
+    //   }
+    // }
   };
 
   return (
