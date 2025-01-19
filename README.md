@@ -252,3 +252,14 @@ ii. 500 Internal Server Error if there are issues with fetching data from the da
    - A new page has been created to display the products details when clicked on it.
    - Each product is displayed with essential details including Product Name, price, description and category.
    - The data for each product is rendered in a loop using `.map()` to ensure scalability, allowing the addition of more products in the future without changing the component structure.
+
+## Milestone 17:
+### 1. **Cart Schema**: 
+- Defines the structure of the cart in the database, including the items and user details.
+  
+### 2. **Cart Routes**:
+  - `/get-user-cart-data`: Fetches the current user's cart details.
+
+### 3. **Cart Controller**:
+  - `GetProductsForUser`: Handles fetching the cart data for the authenticated user.
+  - `addToCart`: Handles adding products to the user's cart, ensuring the item is available and the quantity is updated accordingly.
