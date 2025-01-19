@@ -88,15 +88,6 @@ function ProductEntryPage() {
         return er;
       });
 
-    // for (let pair of formDataBody.entries()) {
-    //   if (pair[1] instanceof File) {
-    //     console.log(
-    //       `${pair[0]}: File - ${pair[1].name}, ${pair[1].type}, ${pair[1].size} bytes`
-    //     );
-    //   } else {
-    //     console.log(`${pair[0]}: ${pair[1]}`);
-    //   }
-    // }
   };
 
   return (

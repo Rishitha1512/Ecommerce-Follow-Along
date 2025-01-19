@@ -1,7 +1,6 @@
 const multer = require("multer");
 const upload = multer({ dest: "temp-uploads/" });
 const express = require("express");
-// const verifyUser = require("../middlewares/jwt-verify.js");
 const {
   createProductController,
   getProductDataController,
