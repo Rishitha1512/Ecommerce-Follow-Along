@@ -263,3 +263,7 @@ ii. 500 Internal Server Error if there are issues with fetching data from the da
 ### 3. **Cart Controller**:
   - `GetProductsForUser`: Handles fetching the cart data for the authenticated user.
   - `addToCart`: Handles adding products to the user's cart, ensuring the item is available and the quantity is updated accordingly.
+
+## Milestone 18:
+### 1. **Get cart Data route**:
+- backend endpoint to fetch all the products inside cart with user mail.
