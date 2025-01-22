@@ -267,3 +267,12 @@ ii. 500 Internal Server Error if there are issues with fetching data from the da
 ## Milestone 18:
 ### 1. **Get cart Data route**:
 - backend endpoint to fetch all the products inside cart with user mail.
+
+## Milestone 19:
+### 1. **Cart UI**: 
+  - A user interface displaying the cart items.
+  - Allows users to view cart contents.
+  
+### 2. **Fetching Cart Details**:
+  - Retrieves the current cart details for the user.
+  - Displays relevant information like item names, quantities and prices.
