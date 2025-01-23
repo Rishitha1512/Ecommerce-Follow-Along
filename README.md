@@ -276,3 +276,12 @@ ii. 500 Internal Server Error if there are issues with fetching data from the da
 ### 2. **Fetching Cart Details**:
   - Retrieves the current cart details for the user.
   - Displays relevant information like item names, quantities and prices.
+
+## Milestone 20:
+### 1. **Added UI for Profile Route**:
+- Implemented a user-friendly interface to display user profile information.
+- Designed the profile page to show essential details such as username, email, and avatar.
+
+### 2. **Created Route for User Data**:
+- Developed a backend route to fetch and serve user data for the profile page.
+- Ensured proper handling of user data retrieval, making it dynamic and ready for display.
