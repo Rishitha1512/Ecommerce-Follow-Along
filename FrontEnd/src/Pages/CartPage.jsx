@@ -23,12 +23,12 @@ function CardPage() {
         return (
           <div key={index}>
             <CartCard
-              title={singleCartObject.productId.title}
-              image={singleCartObject.productId.images[0]}
+              title={singleCartObject.productId?.title}
+              image={singleCartObject.productId?.images[0]}
               //   Index={index}
-              description={singleCartObject.productId.description}
-              originalPrice={singleCartObject.productId.originalPrice}
-              discountedPrice={singleCartObject.productId.discountedPrice}
+              description={singleCartObject.productId?.description}
+              originalPrice={singleCartObject.productId?.originalPrice}
+              discountedPrice={singleCartObject.productId?.discountedPrice}
               id={singleCartObject._id}
               createdBy={'rishi@k.com'}
             />
