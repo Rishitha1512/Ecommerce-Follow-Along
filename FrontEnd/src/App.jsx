@@ -4,7 +4,7 @@ import Signup from './Pages/Signup';
 import Login from './Pages/Login';
 import ProductEntryPage from './Pages/ProductEntryPage';
 import UpdateForm from './Pages/UpdateForm';
-// import Navbar from './component/Navbar/navbar';
+import Navbar from './component/Navbar/navbar';
 import SinglePageProduct from './Pages/SingleProductPage';
 import CartPage from './Pages/CartPage';
 import ProfilePage from './Pages/Profile';
@@ -15,8 +15,7 @@ function App() {
     <>
       {/* <LoginPage /> */}
       {/* <SignupForm /> */}
-      <AddressCard/>
-      {/* <Navbar/> */}
+      <Navbar/>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/signup" element={<Signup />} />
@@ -26,6 +25,7 @@ function App() {
         <Route path="/product-details/:id" element={<SinglePageProduct />} />
         <Route path = "/cart" element = {<CartPage/>} />
         <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/add-address" element={<AddressCard/>} />
       </Routes>
     </>
   );
