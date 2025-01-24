@@ -285,3 +285,13 @@ ii. 500 Internal Server Error if there are issues with fetching data from the da
 ### 2. **Created Route for User Data**:
 - Developed a backend route to fetch and serve user data for the profile page.
 - Ensured proper handling of user data retrieval, making it dynamic and ready for display.
+
+## Milestone 21:
+### 1. **Created Page for Address**:
+- The form allows users to input the following fields:
+  - **City**
+  - **Country**
+  - **Address Line 1**
+  - **Address Line 2**
+  - **ZipCode**
+  - **Address Type** (Home, Work, Billing)
