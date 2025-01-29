@@ -302,3 +302,14 @@ ii. 500 Internal Server Error if there are issues with fetching data from the da
 - After filling in address details, users are redirected back to the profile page.
 - Display the added address on the profile page.
 - Added an button for users to delete addresses from their profile.
+
+## Milestone 23:
+### 1. **Created Checkout Button on Cart Page**:
+- Added a **Checkout** button inside the cart page.
+- Implemented functionality to navigate to the **Select Address** page when the button is clicked.
+
+### 2. **Created Select Address Page**:
+- Created the **Select Address** page to display all the available addresses of the user.
+
+### 3. **Developed Backend Endpoint for Address Retrieval**:
+- Created a backend route to fetch and return all the addresses associated with the user.
