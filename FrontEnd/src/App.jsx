@@ -9,7 +9,8 @@ import SinglePageProduct from './Pages/SingleProductPage';
 import CartPage from './Pages/CartPage';
 import ProfilePage from './Pages/Profile';
 import AddressCard from './component/AddressComp/AddressCard';
-import SelectAddress from './Pages/SelectAddresspage'
+import SelectAddress from './Pages/SelectAddresspage';
+import OrderConfirmation from './Pages/OrderConformationPage';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/add-address" element={<AddressCard/>} />
         <Route path="/select-address" element={<SelectAddress />} />
+        <Route path="/order-confirmation" element={<OrderConfirmation />} />
       </Routes>
     </>
   );
