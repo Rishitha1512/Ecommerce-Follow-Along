@@ -344,3 +344,14 @@ ii. 500 Internal Server Error if there are issues with fetching data from the da
 ### 4. **Create Order Schema**:
    - created Schema for Order
    - Include relevant information such as product details, user, and shipping address in the order schema.
+
+## Milestone 26:
+### 1. **GET /user-orders-data**
+  - Fetches all orders associated with the authenticated user.
+  - Middleware: `verifyUser` (JWT token verification).
+  - Returns a list of orders if the user is authenticated and exists.
+  
+### 2. **GetUserOrders**
+  - Fetches all orders associated with the authenticated user.
+  - Verifies if the user exists and if the provided `userId` is valid.
+  - If valid, fetches orders from the database and returns them to the client.
