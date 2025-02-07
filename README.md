@@ -355,3 +355,20 @@ ii. 500 Internal Server Error if there are issues with fetching data from the da
   - Fetches all orders associated with the authenticated user.
   - Verifies if the user exists and if the provided `userId` is valid.
   - If valid, fetches orders from the database and returns them to the client.
+
+## Milestone 27:
+### 1. **Create Order History Page:**
+   - Design a new page that will show the user’s past orders.
+   - The page will include key information like order date, items ordered, status, and total cost.
+
+### 2. **Send GET Request to `GetUserOrders` Endpoint:**
+   - Make a GET request to the `GetUserOrders` endpoint to retrieve the list of the user's past orders.
+   - The API response will contain the relevant data, including the order details.
+
+### 3. **Display User Orders:**
+   - Once the data is fetched from the endpoint, render it in a clear and user-friendly format on the Order History page.
+   - Ensure that all orders are displayed with relevant information such as order ID, date, and status.
+
+### 4. **Add Orders Page to Navbar:**
+   - Modify the navigation bar to include a link to the new Orders page for easy access.
+   - Ensure the Orders link is visible even in the mobile view hamburger navbar.
