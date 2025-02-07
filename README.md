@@ -372,3 +372,20 @@ ii. 500 Internal Server Error if there are issues with fetching data from the da
 ### 4. **Add Orders Page to Navbar:**
    - Modify the navigation bar to include a link to the new Orders page for easy access.
    - Ensure the Orders link is visible even in the mobile view hamburger navbar.
+
+# Milestone 28:
+### 1. **Add Cancel Button to Each Order:**
+   - On the Order History page, display a "Cancel" button (represented by an "X") next to each order.
+   - This button should only appear if the order has not already been canceled.
+
+### 2. **Hide Cancel Button for Canceled Orders:**
+   - Check the order status when displaying the button.
+   - If the order status is already "Canceled", the button should not be visible for that order.
+
+### 3. **Create API Endpoint to Cancel Order:**
+   - Create a new API endpoint that accepts an `orderId` as a parameter.
+   - The endpoint should fetch the order using the provided `orderId`, change its status to "Canceled", and save the updated order.
+
+### 4. **Trigger Cancel Action on Button Click:**
+   - When the user clicks the "Cancel" button, make a request to the newly created API endpoint with the relevant `orderId`.
+   - Upon successful cancellation, remove the order from order-history page.
