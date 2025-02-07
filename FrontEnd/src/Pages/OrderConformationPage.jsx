@@ -1,20 +1,22 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react';
-import CartCard from '../component/ProductCard/CartCard';
+import axios from "axios";
+import { useEffect, useState } from "react";
+import CartCard from "../component/ProductCard/CartCard";
+import { useNavigate } from "react-router-dom";
 export default function OrderConfirmation() {
   const [cartData, setUsersCartData] = useState([]);
   const [total, setTotal] = useState(0);
   const [userAddress, setAddress] = useState(
-    JSON.parse(localStorage.getItem('address')) || {}
+    JSON.parse(localStorage.getItem("address")) || {}
   );
+  const navigate = useNavigate();
   // totoal
   // address
   // cart data
   useEffect(() => {
     const getCartData = async () => {
-      const token = localStorage.getItem('token');
+      const token = localStorage.getItem("token");
       if (!token) {
-        return alert('Token is missing , Please login');
+        return alert("Token is missing , Please login");
       }
       const response = await axios.get(
         `http://localhost:8080/cart/get-user-cart-data?token=${token}`
@@ -31,6 +33,22 @@ export default function OrderConfirmation() {
 
     getCartData();
   }, []);
+  const OrderConfirmation = async () => {
+    const token = localStorage.getItem("token");
+    if (!token) {
+      return alert("Token is missing please signup");
+    }
+    const response = await axios.post(
+      `http://localhost:8080/orders/confirm-order?token=${token}`,
+      {
+        Items: cartData,
+        address: userAddress,
+        totalAmount: total,
+      }
+    );
+    navigate("/order-history");
+    console.log(response);
+  };
 
   return (
     <div>
@@ -44,13 +62,13 @@ export default function OrderConfirmation() {
             className="p-4 bg-white w-1/2"
             onClick={() => handleClickAddress(userAddress._id)}
           >
-            <div style={{ marginBottom: '8px' }}>
+            <div style={{ marginBottom: "8px" }}>
               <h3 className="text-base font-medium text-gray-800 capitalize mb-2">
-                {userAddress.addressType || 'Address'}
+                {userAddress.addressType || "Address"}
               </h3>
               <div className="text-gray-600">
-                <p>{userAddress.address1}</p>
-                {userAddress.address2 && <p>{userAddress.address2}</p>}
+                <p>{userAddress.add1}</p>
+                {userAddress.add2 && <p>{userAddress.add2}</p>}
                 <p>
                   {userAddress.city}
                   {userAddress.zipCode && `, ${userAddress.zipCode}`}
@@ -78,7 +96,10 @@ export default function OrderConfirmation() {
             })}
         </div>
         <div className="flex justify-center mt-5">
-          <button className="px-5 py-2 rounded-lg bg-blue-500 text-white hover:bg-green-500">
+          <button
+            className="px-5 py-2 rounded-lg bg-blue-500 text-white hover:bg-green-500"
+            onClick={OrderConfirmation}
+          >
             Confirm order
           </button>
         </div>
