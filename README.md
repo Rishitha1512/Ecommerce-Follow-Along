@@ -373,7 +373,7 @@ ii. 500 Internal Server Error if there are issues with fetching data from the da
    - Modify the navigation bar to include a link to the new Orders page for easy access.
    - Ensure the Orders link is visible even in the mobile view hamburger navbar.
 
-# Milestone 28:
+## Milestone 28:
 ### 1. **Add Cancel Button to Each Order:**
    - On the Order History page, display a "Cancel" button (represented by an "X") next to each order.
    - This button should only appear if the order has not already been canceled.
