@@ -11,6 +11,7 @@ import ProfilePage from './Pages/Profile';
 import AddressCard from './component/AddressComp/AddressCard';
 import SelectAddress from './Pages/SelectAddresspage';
 import OrderConfirmation from './Pages/OrderConformationPage';
+import OrderHistory from './Pages/Order-history';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/add-address" element={<AddressCard/>} />
         <Route path="/select-address" element={<SelectAddress />} />
         <Route path="/order-confirmation" element={<OrderConfirmation />} />
+        <Route path="/order-history" element={<OrderHistory />} />
       </Routes>
     </>
   );
