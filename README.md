@@ -390,7 +390,7 @@ ii. 500 Internal Server Error if there are issues with fetching data from the da
    - When the user clicks the "Cancel" button, make a request to the newly created API endpoint with the relevant `orderId`.
    - Upon successful cancellation, remove the order from order-history page.
 
-## Milestone 29:
+## Milestone 29 and 30:
 ### 1. **Set Up Razorpay Account:**
    - Sign up for a Razorpay account.
    - Obtain your API Key and Secret from the Razorpay Dashboard.
