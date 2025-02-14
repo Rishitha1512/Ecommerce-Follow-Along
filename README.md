@@ -389,3 +389,25 @@ ii. 500 Internal Server Error if there are issues with fetching data from the da
 ### 4. **Trigger Cancel Action on Button Click:**
    - When the user clicks the "Cancel" button, make a request to the newly created API endpoint with the relevant `orderId`.
    - Upon successful cancellation, remove the order from order-history page.
+
+## Milestone 29:
+### 1. **Set Up Razorpay Account:**
+   - Sign up for a Razorpay account.
+   - Obtain your API Key and Secret from the Razorpay Dashboard.
+
+### 2. **Install Razorpay:**
+   - Install the Razorpay(for JavaScript or backend as required) by adding it to your project.
+   - For JavaScript, include the Razorpay checkout script in your HTML.
+
+### 3. **Create Payment Order Endpoint (Backend):**
+   - Create an API endpoint on the server that generates an order in Razorpay when the user clicks "Confirm Order".
+   - Use Razorpay’s API to create an order:
+     - Send the necessary details like amount, currency, and receipt ID.
+     - Receive a **Razorpay Order ID** upon successful order creation.
+
+### 4. **Create "Confirm Order" Button (Frontend):**
+   - Add a “Confirm Order” button to the order summary or checkout page.
+   - When the user clicks the "Confirm Order" button, make a request to the server to create an order in Razorpay.
+
+### 5. **Trigger Razorpay Payment Modal:**
+   - On successful creation of the Razorpay order (after receiving the Razorpay Order ID), open the Razorpay payment modal.
