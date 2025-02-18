@@ -411,3 +411,23 @@ ii. 500 Internal Server Error if there are issues with fetching data from the da
 
 ### 5. **Trigger Razorpay Payment Modal:**
    - On successful creation of the Razorpay order (after receiving the Razorpay Order ID), open the Razorpay payment modal.
+
+## Milestone 31:
+### 1. **Install react-redux npm package:**
+   - Install the `react-redux` package to enable state management in your React app.
+
+### 2. **Create Store Folder with Necessary Files:**
+   - Create a new folder named `Redux` to organize your Redux-related files.
+   - Inside the `Redux` folder, create two files: `Store.js` and `userActions.js`.
+
+### 3. **Configure Store with userReducer:**
+   - In the `Store.js` file, configure the Redux store.
+   - Use the `configureStore` method from Redux Tool kit to create a store that uses `userReducer` to manage the global state for the user's email.
+
+### 4. **Create setEmail Function in userActions.js:**
+   - In the `userActions.js` file, create an action called `setEmail` that will store the user's email in the global state.
+   - This function will dispatch the email to the Redux store.
+
+### 5. **Wrap App Component in Provider:**
+   - In the `main.jsx` file, wrap the `App` component with the `Provider` component from `react-redux`.
+   - Pass the configured store as a prop to the `Provider` to make the global state accessible throughout the app.
