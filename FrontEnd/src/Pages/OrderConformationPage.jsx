@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import CartCard from "../component/ProductCard/CartCard";
 import { useNavigate } from "react-router-dom";
 import { handlePay } from '../Utils/Razorpay';
+import { useSelector } from "react-redux";
 export default function OrderConfirmation() {
   const [cartData, setUsersCartData] = useState([]);
   const [total, setTotal] = useState(0);
@@ -13,6 +14,7 @@ export default function OrderConfirmation() {
   // totoal
   // address
   // cart data
+  const data = useSelector((state) => state.user);
   useEffect(() => {
     const getCartData = async () => {
       const token = localStorage.getItem("token");

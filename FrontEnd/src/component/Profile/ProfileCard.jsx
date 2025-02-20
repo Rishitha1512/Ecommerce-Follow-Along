@@ -1,6 +1,6 @@
-/* eslint-disable react/prop-types */
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 
 const Card = ({ children, className = '' }) => (
   <div className={`bg-white rounded-lg shadow-lg p-6 ${className}`}>
@@ -23,20 +23,23 @@ const InfoSection = ({ icon, label, value }) => (
 );
 export function ProfileCard() {
   const [userData, setUserData] = useState({});
-  useEffect(() => {
-    const getUserData = async () => {
-      const token = localStorage.getItem('token');
-      if (!token) {
-        return alert('Token missing login');
-      }
-      const response = await axios.get(
-        `http://localhost:8080/user/user-data?token=${token}`
-      );
+  const getUserData = async () => {
+    const token = localStorage.getItem('token');
+    if (!token) {
+      return alert('Token missing login');
+    }
+    const response = await axios.get(
+      `http://localhost:8080/user/user-data?token=${token}`
+    );
 
-      setUserData(response.data.data);
-    };
+    setUserData(response.data.data);
+  };
+  const data = useSelector((state) => state.user);
+  console.log(data);
+  useEffect(() => {
     getUserData();
   }, []);
+
   const handleDeleteAddy = async (id) => {
     const token = localStorage.getItem('token');
     try {
@@ -151,18 +154,26 @@ export function ProfileCard() {
             value={
               userData?.address?.length > 0 ? (
                 <ul className="list-disc list-inside">
-                  {userData.address.map((SingleAddy, index) =>(
-                    <>
+                  {userData.address.map((SingleAddy, index) => (
+                    <div key={index}>
                       <button onClick={() => handleDeleteAddy(SingleAddy._id)}>
                         Delete 👇🏻
                       </button>
-                      <li key = {index}>City: {SingleAddy.city}</li>
-                      <li key = {index}>Country: {SingleAddy.country}</li>
-                      <li key = {index}>Address 1: {SingleAddy.add1}</li>
-                      <li key = {index}>Address 2: {SingleAddy.add2}</li>
-                      <li key = {index}>Pin Code: {SingleAddy.zipCode}</li>
+                      <li key={SingleAddy._id}>City: {SingleAddy.city}</li>
+                      <li key={SingleAddy._id}>
+                        Country: {SingleAddy.country}
+                      </li>
+                      <li key={SingleAddy._id}>
+                        Address 1: {SingleAddy.address1}
+                      </li>
+                      <li key={SingleAddy._id}>
+                        Address 2: {SingleAddy.address2}
+                      </li>
+                      <li key={SingleAddy._id}>
+                        Pin Code: {SingleAddy.zipCode}
+                      </li>
                       <br />
-                    </>
+                    </div>
                   ))}
                 </ul>
               ) : (
