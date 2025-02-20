@@ -431,3 +431,10 @@ ii. 500 Internal Server Error if there are issues with fetching data from the da
 ### 5. **Wrap App Component in Provider:**
    - In the `main.jsx` file, wrap the `App` component with the `Provider` component from `react-redux`.
    - Pass the configured store as a prop to the `Provider` to make the global state accessible throughout the app.
+
+## Milestone 32:
+### 1. **Login Page**: 
+- Use the `Dispatch` method to store the user's email in the global state.
+   
+### 2. **Other Pages**:
+- Use the `useSelector` hook to retrieve the stored email from the global state.
