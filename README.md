@@ -438,3 +438,17 @@ ii. 500 Internal Server Error if there are issues with fetching data from the da
    
 ### 2. **Other Pages**:
 - Use the `useSelector` hook to retrieve the stored email from the global state.
+
+## Milestone 33:
+### 1. **Setting the Token as a Cookie**:
+   - On successful login, the JWT token is sent as a cookie in the response.
+   - The cookie is named `token`.
+
+### 2. **Security Flags for the Cookie**:
+   - `httpOnly: true`: Prevents client-side JavaScript from accessing the cookie, reducing the risk of cross-site scripting (XSS) attacks.
+   - `secure: true`: Ensures the cookie is sent over HTTPS, enhancing security.
+   - `sameSite: 'Strict'`: Prevents the cookie from being sent with cross-site requests, protecting against cross-site request forgery (CSRF) attacks.
+
+### 3. **Response Sent to the User**:
+   - A successful login message is returned along with the token and a `success: true` flag.
+   - The response is sent with a status code of `200`.
