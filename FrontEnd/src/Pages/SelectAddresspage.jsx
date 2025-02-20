@@ -1,8 +1,10 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import AddressList from '../component/AllAddress/Addresses';
+import { useSelector } from 'react-redux';
 export default function SelectAddres() {
   const [AllAddresses, setAllAddresses] = useState([]);
+  const data = useSelector((state) => state.user);
   useEffect(() => {
     //api call to get addresses
     const fetchAddress = async () => {
