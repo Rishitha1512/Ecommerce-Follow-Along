@@ -452,3 +452,12 @@ ii. 500 Internal Server Error if there are issues with fetching data from the da
 ### 3. **Response Sent to the User**:
    - A successful login message is returned along with the token and a `success: true` flag.
    - The response is sent with a status code of `200`.
+
+## Milestone 34:
+### 1.**JWT Authentication**: 
+  - Used JWT for user login and any communication between the client and server.
+  - Ensures secure token-based authentication and authorization.
+  
+### 2.**JWT in Cookies**:
+  - Stored JWT in cookies to maintain session state.
+  - Helps in retaining user authentication status across page reloads and browser sessions.
