@@ -464,3 +464,4 @@ ii. 500 Internal Server Error if there are issues with fetching data from the da
 
   ## Milestone 35:
 ### BackEnd Deployed Link: https://ecommerce-follow-along-judc.onrender.com
+### FrontEnd Deployed Link: https://ecom-follow-along.netlify.app/
