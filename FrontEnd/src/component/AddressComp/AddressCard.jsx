@@ -25,7 +25,7 @@ const AddressCard = ()=>{
         if (!token){
             return alert('Token missing');
         }
-        await axios.post(`http://localhost:8080/user/add-address?token=${token}`,
+        await axios.post(`https://ecommerce-follow-along-judc.onrender.com/user/add-address?token=${token}`,
             addressData
         );
         navigate('/profile');

@@ -54,7 +54,7 @@ function SignupForm() {
     formDataBody.append('name', data.name);
     formDataBody.append('file', data.file);
     try {
-      await axios.post('http://localhost:8080/user/signup', formDataBody, {
+      await axios.post('https://ecommerce-follow-along-judc.onrender.com/user/signup', formDataBody, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

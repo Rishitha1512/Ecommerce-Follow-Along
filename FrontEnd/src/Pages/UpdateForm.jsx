@@ -72,7 +72,7 @@ function UpdateForm(){
         }
     
         axios
-          .put(`http://localhost:8080/product/update-products/${id}`, formDataBody, {
+          .put(`https://ecommerce-follow-along-judc.onrender.com/product/update-products/${id}`, formDataBody, {
             headers: {
               "Content-Type": "multipart/form-data",
             },
@@ -87,7 +87,7 @@ function UpdateForm(){
       useEffect(()=>{
         const getDataForId=async ()=>{
           const singleData= await axios.get(
-            `http://localhost:8080/product/get-single/${id}`
+            `https://ecommerce-follow-along-judc.onrender.com/product/get-single/${id}`
             )
           setFormData(singleData.data.data)
           setImages(singleData.data.data.images)
