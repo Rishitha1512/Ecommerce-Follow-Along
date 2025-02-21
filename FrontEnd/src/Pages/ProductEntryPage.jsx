@@ -73,7 +73,7 @@ function ProductEntryPage() {
     const token = localStorage.getItem('token');
     axios
       .post(
-        `http://localhost:8080/product/create-product?token=${token}`,
+        `https://ecommerce-follow-along-judc.onrender.com/product/create-product?token=${token}`,
         formDataBody,
         {
           headers: {

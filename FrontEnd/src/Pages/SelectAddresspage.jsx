@@ -13,7 +13,7 @@ export default function SelectAddres() {
         alert('token missing please login again');
       }
       const response = await axios.get(
-        `http://localhost:8080/user/get-addresses?token=${token}`
+        `https://ecommerce-follow-along-judc.onrender.com/user/get-addresses?token=${token}`
       );
       console.log(response.data.userInfo);
       setAllAddresses(response.data.userInfo.address);

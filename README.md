@@ -461,3 +461,6 @@ ii. 500 Internal Server Error if there are issues with fetching data from the da
 ### 2.**JWT in Cookies**:
   - Stored JWT in cookies to maintain session state.
   - Helps in retaining user authentication status across page reloads and browser sessions.
+
+  ## Milestone 35:
+### BackEnd Deployed Link: https://ecommerce-follow-along-judc.onrender.com

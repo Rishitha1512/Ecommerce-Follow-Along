@@ -10,7 +10,7 @@ function HomePage() {
   
   const fetchProduct = async () => {
     const res = await axios.get(
-      "http://localhost:8080/product/get-products"
+      "https://ecommerce-follow-along-judc.onrender.com/product/get-products"
     );
     setdata(res.data.data);
   };
@@ -24,7 +24,7 @@ function HomePage() {
   console.log(data);
   const handleDelete = async (id) => {
     console.log('id', id);
-    const data = await axios.delete(`http://localhost:8080/product/${id}`);
+    const data = await axios.delete(`https://ecommerce-follow-along-judc.onrender.com/product/${id}`);
     setdata(data.data.data);
   };
 

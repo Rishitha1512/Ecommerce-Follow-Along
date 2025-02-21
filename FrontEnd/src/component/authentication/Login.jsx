@@ -25,7 +25,7 @@ function LoginPage() {
     e.preventDefault();
     try {
       // axios request to backend
-      const response = await axios.post('http://localhost:8080/user/login', {
+      const response = await axios.post('https://ecommerce-follow-along-judc.onrender.com/user/login', {
         email: credentials.email,
         password: credentials.password,
       });
